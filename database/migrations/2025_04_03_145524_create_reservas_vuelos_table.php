@@ -17,6 +17,8 @@ return new class extends Migration
             $table->unsignedBigInteger('id_vuelo');
             $table->date('fecha_reserva');
             $table->double('precio_total');
+            $table->integer('num_personas');
+            $table->string('num_asientos');
             $table->string('estado');
             $table->foreign('id_usuario')->references('id')->on('usuarios')->onDelete('cascade');
             $table->foreign('id_vuelo')->references('id')->on('vuelos')->onDelete('cascade');

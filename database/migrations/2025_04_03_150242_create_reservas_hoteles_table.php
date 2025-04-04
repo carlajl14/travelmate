@@ -19,6 +19,7 @@ return new class extends Migration
             $table->date('fecha_checkin');
             $table->date('fecha_checkout');
             $table->double('precio_total');
+            $table->integer('num_personas');
             $table->string('estado');
             $table->foreign('id_usuario')->references('id')->on('usuarios')->onDelete('cascade');
             $table->foreign('id_hotel')->references('id')->on('hoteles')->onDelete('cascade');
