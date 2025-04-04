@@ -17,8 +17,8 @@ return new class extends Migration
             $table->string('direccion');
             $table->string('descripcion');
             $table->double('precio_noche');
-            $table->string('disponibilidad');
-            $table->string('categoria');
+            $table->boolean('disponibilidad')->default(true);
+            $table->integer('categoria');
             $table->string('ubicacion');
             $table->string('imagen');
         });
